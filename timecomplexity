@@ -1,0 +1,34 @@
+# Time Complexity-> Rate at which the time taken increases with respect to the input size.
+#!ALT+z to format according to window size of VS Code
+
+# Big-Oh Notation-> O()
+
+//for example
+for(i=0;i<=s;i++)//i=1  --Step 1
+                 //i<=s --Step 2
+                 //cout<<"Raj";  --Step 3
+                 //i++  --Step 4
+                 //            :[repeating 1,2,3,4 n times]
+                 //            :
+                 //            :
+                 //            n
+{
+    cout<<"Raj";
+}
+#THREE MUST USE RULES--
+->always compute your Time complexity in worst case scenario
+->avoid Constants
+->avoid lower values
+
+
+
+
+
+
+take example
+
+BEST CASE->          AVERAGE CASE->            WORST CASE->
+when program         when program              when program
+takes least          takes average             takes most 
+amount of time       amount of time            amount of 
+to complete          to complete               time.
