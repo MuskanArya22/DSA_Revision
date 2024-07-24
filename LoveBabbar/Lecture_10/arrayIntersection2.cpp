@@ -1,23 +1,23 @@
 #include<iostream>
 #include<climits>
 
-
 using namespace std;
 
-int intersection(int arr[], int n, int brr[], int m){
-    
-    for(int i=0;i<n;i++){
-        int element=arr[i];
-
-        for(int j=0;j<m;j++){
-            if(element==brr[j]){
-                cout<<element<<" ";
-                brr[j]=INT_MIN;
-                break;
-            }
+void intersection(int arr[], int n, int brr[], int m){
+    int i=0,j=0;
+    while(i<n && j<m){
+        if(arr[i]==brr[j]){
+            cout<<arr[i]<<" ";
+            i++;
+            j++;
+        }
+        else if(arr[i]<brr[j]){
+            i++;
+        }
+        else{
+            j++;
         }
     }
-    return 0;
     
 }
 
@@ -36,5 +36,4 @@ int main(){
     intersection(arr,n,brr,m);
 
     return 0;
-
 }
