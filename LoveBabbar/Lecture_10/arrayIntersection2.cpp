@@ -6,7 +6,7 @@ using namespace std;
 void intersection(int arr[], int n, int brr[], int m){
     int i=0,j=0;
     while(i<n && j<m){
-        if(arr[i]==brr[j]){
+        if(arr[i]==brr[j]){ 
             cout<<arr[i]<<" ";
             i++;
             j++;
