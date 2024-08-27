@@ -2,37 +2,38 @@
 
 using namespace std;
 
-void binarySearch(int arr[],int n, int key){
+int binarySearch(int arr[],int n,int key){
     int low=0;
     int high=n-1;
-    int mid;
+    int mid=low+(low+high)/2;
 
     while(low<=high){
-        mid=(low+high/2);
-        if(arr[mid==key]){
-            cout<<mid;
-            break;
+        mid=low+(low+high)/2;
+        if(arr[mid]==key){
+            return mid;
         }
-        else if(arr[mid>key]){
+        else if(arr[mid]>key){
             high=mid-1;
         }
         else{
             low=mid+1;
-        } 
+        }
     }
+    return -1;
 }
 
 int main(){
     int n;
-    cin>>n;
-
+    int key;
     int arr[10];
-    for(int i=0;i<n;i++){
+
+    cin>>n;
+    cin>>key;
+    for (int i=0;i<n;i++){
         cin>>arr[i];
     }
 
-    int key;
-    cin>>key;
+    cout<<"Index of Key is "<<binarySearch(arr,n,key);
 
-    binarySearch(arr,n,key);
+    return 0;
 }
